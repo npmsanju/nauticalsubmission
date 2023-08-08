@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from "react";
-import {gql, useQuery} from '@apollo/client';
+import {useQuery} from '@apollo/client';
 import {LOAD_PRODUCTS} from '../GraphQL/Queries';
-import {Card, Image, Grid, Button, Icon, CardContent} from 'semantic-ui-react';
+import {Card, Image, Grid, CardContent} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 
@@ -9,7 +9,6 @@ import {useLocation} from 'react-router-dom';
 function GetAllProducts(){
     const location = useLocation();
     const soldOut = location.state ? location.state.soldOut : "IN_STOCK";
-    console.log(location.state)
     const {error, loading, data} = useQuery(LOAD_PRODUCTS, {
         variables: {isSoldOut : soldOut}
     });

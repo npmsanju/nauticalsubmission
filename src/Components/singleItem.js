@@ -8,7 +8,6 @@ const location = useLocation();
 const {currItem, currImage, sold} = location.state;
 const [variation, setVariation] = useState({currItem, currImage, showRange: true, sold});
 
-console.log('variationSOLD', variation);
 
 
 const updateVariant = (varImg,varPrice) => {
