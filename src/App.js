@@ -12,9 +12,10 @@ function App() {
   return (
       <div><NavBar/>
       <Routes>
-        <Route exact path="/" element={<GetAllProducts/>}/>
-        <Route exact path="/soldout" element={<GetAllProducts/>}/>
+        <Route path="/" element={<GetAllProducts/>}/>
+        <Route path="/soldout" element={<GetAllProducts/>}/>
         <Route path="product/:id" element={<GetSingleProduct/>}/>
+        <Route path="*" element={<GetAllProducts/>}/>
       </Routes>
       </div>
   );
