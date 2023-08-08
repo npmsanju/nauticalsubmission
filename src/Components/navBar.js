@@ -26,11 +26,6 @@ export default class NavBar extends Component {
             active={activeItem === 'Sale'}
             onClick={this.handleItemClick}
           />
-          <Menu.Item
-            name='Categories'
-            active={activeItem === 'Categories'}
-            onClick={this.handleItemClick}
-          />
           <Menu.Menu position='right'>
             <Menu.Item>
               <Input icon='search' placeholder='Search...' />
